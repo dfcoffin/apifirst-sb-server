@@ -64,6 +64,7 @@
 							<inputSpec>https://api.redocly.com/registry/bundle/green-button-alliance-rlv/API%20First%20with%20Spring%20Boot%20-%20Development/v1/openapi.yaml?branch=development</inputSpec>
 							<generatorName>java</generatorName>
 							<library>resttemplate</library>
+							<modelPackage>com.reminetworks.apifirst.model</modelPackage>
 							<generateApiDocumentation>false</generateApiDocumentation>
 							<generateModelDocumentation>false</generateModelDocumentation>
 							<generateApiTests>false</generateApiTests>
