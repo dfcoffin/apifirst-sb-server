@@ -1,5 +1,9 @@
 package guru.springframework.apifirstserver.controllers;
 
+import com.reminetworks.apifirst.model.Customer;
+import guru.springframework.apifirstserver.repositories.CustomerRepository;
+import guru.springframework.apifirstserver.repositories.OrderRepository;
+import guru.springframework.apifirstserver.repositories.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
@@ -12,21 +16,26 @@ import org.springframework.web.context.WebApplicationContext;
 public class BaseTest {
 
 	@Autowired
-	CustomerController customerController;
+	CustomerRepository customerRepository;
 
 	@Autowired
-	ProductController productController;
+	ProductRepository productRepository;
 
 	@Autowired
-	OrderController orderController;
+	OrderRepository orderRepository;
 
 	@Autowired
 	WebApplicationContext wac;
 
 	public MockMvc mockMvc;
 
+	Customer testCustomer;
+
 	@BeforeEach
 	void setup() {
-		mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
+		mockMvc = MockMvcBuilders.webAppContextSetup(wac)
+				.build();
+
+		testCustomer = customerRepository.findAll().iterator().next();
 	}
 }

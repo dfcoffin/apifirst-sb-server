@@ -15,7 +15,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 public class CustomerControllerTest extends BaseTest {
 
-	@DisplayName("Test list customers")
+	@DisplayName("Test GET Customer by Id")
+	@Test
+	void testGetCustomerById() throws Exception {
+		mockMvc.perform(get(CustomerController.BASE_URL + "/{customerId}", testCustomer.getId())
+				.accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.id").value(testCustomer.getId().toString()));
+	}
+
+	@DisplayName("Test List Customers")
 	@Test
 	void testListCustomers() throws Exception {
 		mockMvc.perform(get(CustomerController.BASE_URL)
