@@ -1,7 +1,7 @@
 package guru.springframework;
 
 /**
- * @author Donald F. Coffin, Green Button Alliance, Inc.
+ * @author Donald F. Coffin, REMI Networks
  **/
 public class Main {
 	public static void main(String[] args) {

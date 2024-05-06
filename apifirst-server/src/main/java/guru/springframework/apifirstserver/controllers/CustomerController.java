@@ -1,7 +1,7 @@
 package guru.springframework.apifirstserver.controllers;
 
 import com.reminetworks.apifirst.model.Customer;
-import guru.springframework.apifirstserver.services.CustomerService.CustomerService;
+import guru.springframework.apifirstserver.services.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ import java.util.UUID;
 import static guru.springframework.apifirstserver.controllers.CustomerController.*;
 
 /**
- * @author Donald F. Coffin, Green Button Alliance, Inc.
+ * @author Donald F. Coffin, REMI Networks
  **/
 @RestController
 @RequiredArgsConstructor

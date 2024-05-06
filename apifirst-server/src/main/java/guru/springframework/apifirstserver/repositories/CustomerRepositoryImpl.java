@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 /**
- * @author Donald F. Coffin, Green Button Alliance, Inc.
+ * @author Donald F. Coffin, REMI Networks
  **/
 
 @Repository
