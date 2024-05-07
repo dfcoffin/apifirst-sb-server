@@ -1,6 +1,7 @@
 package guru.springframework.apifirstserver.controllers;
 
 import com.reminetworks.apifirst.model.Customer;
+import com.reminetworks.apifirst.model.Product;
 import guru.springframework.apifirstserver.repositories.CustomerRepository;
 import guru.springframework.apifirstserver.repositories.OrderRepository;
 import guru.springframework.apifirstserver.repositories.ProductRepository;
@@ -34,6 +35,7 @@ public class BaseTest {
 	public MockMvc mockMvc;
 
 	Customer testCustomer;
+	Product testProduct;
 
 	@BeforeEach
 	void setup() {
@@ -42,5 +44,7 @@ public class BaseTest {
 				.build();
 
 		testCustomer = customerRepository.findAll().iterator().next();
+
+		testProduct = productRepository.findAll().iterator().next();
 	}
 }
